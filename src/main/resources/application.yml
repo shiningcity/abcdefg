@@ -3,3 +3,14 @@ flowable:
   async-executor-activate: false
 #  将databaseSchemaUpdate设置为true。当Flowable发现库与数据库表结构不一致时，会自动将数据库表结构升级至新版本。
   database-schema-update: true
+  
+spring:
+  jackson:
+    # 全局设置@JsonFormat的格式pattern
+    date-format: yyyy-MM-dd HH:mm:ss
+    # 当地时区
+    locale: zh
+    # 设置全局时区
+    time-zone: GMT+8
+    # 不为空的属性才会序列化,具体属性可看JsonInclude.Include
+    default-property-inclusion: NON_NULL 
